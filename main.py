@@ -16,3 +16,22 @@ IMAGENS_PASSARO = [
 
 pygame.font.init()
 FONTE_PONTOS = pygame.font.SysFont('arial', 50)
+
+class Passaro:
+    IMGS = IMAGENS_PASSARO
+    # animações da rotação
+    ROTACAO_MAXIMA = 25
+    VELOCIDADE_ROTACAO = 20
+    TEMPO_ANIMACAO = 5
+    pass
+
+class Cano:
+    DISTANCIA = 200
+    VELOCIDADE = 5
+    pass
+
+class Chao:
+    VELOCIDADE = 5
+    LARGURA = IMAGEM_CHAO.get_width()
+    IMAGEM = IMAGEM_CHAO
+    pass
