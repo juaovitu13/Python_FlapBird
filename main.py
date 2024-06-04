@@ -23,15 +23,37 @@ class Passaro:
     ROTACAO_MAXIMA = 25
     VELOCIDADE_ROTACAO = 20
     TEMPO_ANIMACAO = 5
-    pass
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.angulo = 0
+        self.velocidade = 0
+        self.altura = self.y
+        self.tempo = 0
+        self.contagem_imagem = 0
+        self.imagem = self.IMGS[0]
 
 class Cano:
     DISTANCIA = 200
     VELOCIDADE = 5
-    pass
+
+    def __init__(self, x):
+        self.x = x
+        self.altura = 0
+        self.pos_topo = 0
+        self.pos_base = 0
+        self.CANO_TOPO = pygame.transform.flip(IMAGEM_CANO, False, True)
+        self.CANO_BASE = IMAGEM_CANO
+        self.passou = False
+        self.definir_altura()
 
 class Chao:
     VELOCIDADE = 5
     LARGURA = IMAGEM_CHAO.get_width()
     IMAGEM = IMAGEM_CHAO
-    pass
+
+    def __init__(self, y):
+        self.y = y
+        self.x1 = 0
+        self.x2 = self.LARGURA
