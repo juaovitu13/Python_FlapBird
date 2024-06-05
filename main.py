@@ -34,6 +34,11 @@ class Passaro:
         self.contagem_imagem = 0
         self.imagem = self.IMGS[0]
 
+    def pular(self):
+        self.velocidade = -10.5
+        self.tempo = 0
+        self.altura = self.y
+
 class Cano:
     DISTANCIA = 200
     VELOCIDADE = 5
