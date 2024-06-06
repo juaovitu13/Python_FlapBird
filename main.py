@@ -150,3 +150,8 @@ class Chao:
             self.x1 = self.x2 + self.LARGURA
         if self.x2 + self.LARGURA < 0:
             self.x2 = self.x1 + self.LARGURA
+
+    def desenhar(self, tela):
+        tela.blit(self.IMAGEM, (self.x1, self.y))
+        tela.blit(self.IMAGEM, (self.x2, self.y))
+
