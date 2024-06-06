@@ -111,6 +111,10 @@ class Cano:
     
     def mover(self):
         self.x -= self.VELOCIDADE
+    
+    def desenhar(self, tela):
+        tela.blit(self.CANO_TOPO, (self.x, self.pos_topo))
+        tela.blit(self.CANO_BASE, (self.x, self.pos_base))
 
 
 class Chao:
