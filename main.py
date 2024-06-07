@@ -3,7 +3,7 @@ import os
 import random
 import passaro
 import cano
-import chao
+import chao 
 
 TELA_LARGURA = 500
 TELA_ALTURA = 800
@@ -25,3 +25,13 @@ def desenhar_tela(tela, passaros, canos, chao, pontos):
     chao.desenhar(tela)
     pygame.display.update()
 
+def main():
+    passaros = [Passaro(230, 350)]
+    chao = Chao(730)
+    canos = [Cano(700)]
+    tela = pygame.display.set_mode((TELA_LARGURA, TELA_ALTURA))
+    pontos = 0
+    relogio = pygame.time.Clock()
+
+if __name__ == '__main__':
+    main()
